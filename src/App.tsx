@@ -1,24 +1,19 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import LanguageSelector from './components/LanguageSelector';
+import Tags from './components/Tags';
+import UserList from './components/UserList';
 
-function App() {
+function App(): JSX.Element {
+  const [userList, setUserList] = useState<string>('');
+  const [language, setLanguage] = useState<any>({ id: 'en', name: 'English', greetings: 'Hi, ' });
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <div className="form">
+        <UserList userList={userList} onUserListChanged={(newUserList) => setUserList(newUserList)} />
+        <LanguageSelector selectedLanguage={language} onLanguageChanged={(newLanguage) => setLanguage(newLanguage)} />
+        <Tags userList={userList} language={language} />
+      </div>
     </div>
   );
 }

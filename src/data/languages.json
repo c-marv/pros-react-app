@@ -1,0 +1,19 @@
+[
+  {
+    "id": "en",
+    "name": "English",
+    "greetings": "Hi, "
+  },{
+    "id": "es",
+    "name": "Spanish",
+    "greetings": "Hola, "
+  }, {
+    "id": "jp",
+    "name": "Japanese",
+    "greetings": "Konnichiwa, "
+  }, {
+    "id": "pr",
+    "name": "Portuguese",
+    "greetings": "Olá, "
+  }
+]
