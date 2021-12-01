@@ -9,7 +9,7 @@ You need to have installed:
 - A web browser (Chrome, Edge, Firefox)
 
 ## How to run the project
-1. Clone de repository
+1. Clone the repository
     ```shell
     $ git clone https://github.com/c-marv/pros-react-app.git
     ```
